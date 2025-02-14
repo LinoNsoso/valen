@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My beautiful</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+        }
+        h1 {
+            color: #bf4875;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            background-color: #ff4d79;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .envelope-container {
+            margin-top: 50px;
+        }
+        .envelope {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 20px auto 0;
+            background: #ff4d79;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: -75px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 75px solid #ff4d79;
+        }
+        .letter {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+    </style>
+    <script>
+        function nextPage(current, next) {
+            document.getElementById(current).classList.add('hidden');
+            document.getElementById(next).classList.remove('hidden');
+        }
+        function wrongAnswer() {
+            alert('Wrong my baby every part of you is my favoriteeeeeee!! How could you not know?? ❤️');
+            nextPage('page2', 'page3');
+        }
+        function toggleEnvelope() {
+            let letter = document.getElementById('letter');
+            letter.style.display = (letter.style.display === 'none' || letter.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div id="page1" class="container">
+        <h1>hey myy babyyy</h1>
+        <p>find my love letter rnnn!!</p>
+        <button onclick="nextPage('page1', 'page2')">Letss gooo</button>
+    </div>
+    <div id="page2" class="container hidden">
+        <h1>Which part of lea is my favorite?</h1>
+        <p>Choose wiselyyyy lea</p>
+        <!-- Replace images with clickable buttons -->
+        <button onclick="wrongAnswer()">Option 1: ur loving adorable personality</button>
+        <br>
+        <br>
+        <button onclick="wrongAnswer()">Option 2: ur sexy perfect sweet body</button>
+        <br>
+        <br>
+        <button onclick="wrongAnswer()">Option 3: ur jealous side 🤤</button>
+        <br>
+    </div>
+    
+
+    </div>
+    
+    <div id="page3" class="container hidden">
+        <h1>Almost There!</h1>
+        <p>Click the heart to unlock the final message.</p>
+        <button onclick="nextPage('page3', 'finalPage')">❤️</button>
+    </div>
+    
+    <div id="finalPage" class="container hidden">
+        <h1>To My Dearest lea</h1>
+<br>
+<br>
+        <div class="envelope-container">
+            <div class="envelope" onclick="toggleEnvelope()">
+                <p style="color: white; font-size: 18px; font-weight: bold;">💌 Click to Open/Close</p>
+            </div>
+        </div>
+        <div id="letter" class="letter">
+            <h2>My undying love for You</h2>
+            <p>Lea, I honestly don’t think I could be more grateful for meeting someone like you. You mean the absolute world to me, and I’m so happy we crossed paths. You make me laugh, smile, and feel so much more than I ever expected. I want you to know how much you matter to me, and I hope you always remember that every single day. Je t’aime tellement, more than I could ever fully put into words.
+
+                When I think about you, I just feel so at peace. Even though we’ve never met in person, you’ve already become such an important part of my life. You’ve shown me what real connection feels like, and I’m lucky to have found that in you. Tu es incroyable, Lea. Your kindness, your humor, the way you understand me it’s all so rare, and I never want to take that for granted.
+                
+                I trust you completely, and I feel the happiest when I’m with you. 
+                
+                Je veux que tu saches que je t’aime avec tout mon cœur I can’t wait for whatever comes next for us, whether it’s more messages, more conversations, or one day meeting in person. Happy Valentine’s Day, ma belle.</p>
+            <p>Happy Valentine's Day my love </p>
+        </div>
+    </div>
+</body>
+</html>
